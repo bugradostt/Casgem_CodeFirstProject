@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202307120743374_add_mig.designer.cs">
       <DependentUpon>202307120743374_add_mig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307120809360_mig_update.cs" />
+    <Compile Include="Migrations\202307120809360_mig_update.designer.cs">
+      <DependentUpon>202307120809360_mig_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -244,6 +248,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202307120743374_add_mig.resx">
       <DependentUpon>202307120743374_add_mig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307120809360_mig_update.resx">
+      <DependentUpon>202307120809360_mig_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
