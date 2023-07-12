@@ -127,7 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Dal\Context\TravelContext.cs" />
     <Compile Include="Dal\Entities\Booking.cs" />
     <Compile Include="Dal\Entities\Contact.cs" />
@@ -219,14 +219,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Temlates\vitrin\assets\fonts\fontawesome-webfont.eot" />
     <Content Include="Temlates\vitrin\assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Temlates\vitrin\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="Temlates\vitrin\assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="Temlates\vitrin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
