@@ -1,0 +1,37 @@
+﻿@model Casgem_CodeFirstProject.Dal.Entities.Guide
+
+@{
+    ViewBag.Title = "EditGuide";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h3> Rehber Güncelle</h3>
+<hr />
+
+<form method="post">
+    <input type="hidden" name="GuideId" value="@Html.ValueFor(x=>x.GuideId)" class="form-control" required />
+
+
+    <div class="mt-3">
+        <label>Adı Soyadı</label>
+        <input type="text" name="GuideName" value="@Html.ValueFor(x=>x.GuideName)" placeholder="Adnız soyadınız" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Rehber Unvanı</label>
+        <input type="text" name="GuideTitle" value="@Html.ValueFor(x=>x.GuideTitle)" placeholder="Rehber unvanı" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Fotoğraf Url</label>
+        <input type="text" name="GuideImageUrl" value="@Html.ValueFor(x=>x.GuideImageUrl)" placeholder="Fotoğraf url" class="form-control" required />
+    </div>
+
+    <br />
+
+    <a class="btn btn-danger" href="/AdminGuide/Index/">İptal</a>
+    <input type="submit" value="Kaydet" class="btn btn-success" />
+</form>
+
+

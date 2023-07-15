@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddGuide";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3> Rehber Ekle</h3>
+<hr />
+
+<form method="post">
+
+    <div class="mt-3">
+        <label>Adı Soyadı</label>
+        <input type="text" name="GuideName" placeholder="Adnız soyadınız" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Rehber Unvanı</label>
+        <input type="text" name="GuideTitle" placeholder="Rehber unvanı" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Fotoğraf Url</label>
+        <input type="text" name="GuideImageUrl" placeholder="Fotoğraf url" class="form-control" required />
+    </div>
+
+    <br />
+    <a class="btn btn-danger" href="/AdminGuide/Index/">İptal</a>
+
+
+    <input type="submit" value="Kaydet" class="btn btn-success" />
+</form>
+

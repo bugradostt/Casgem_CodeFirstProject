@@ -1,0 +1,45 @@
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.Guide>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3>Rehber İşlemleri</h3>
+<hr />
+
+<a href="/AdminGuide/AddGuide/" class="btn btn-success">Kaydet</a>
+<br />
+<br />
+
+<table class="table table-striped">
+
+    <tr>
+        <th>#</th>
+        <th>Rehber Adı</th>
+        <th>Unvan</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @{ int a = 1;}
+    @foreach (var i in Model)
+    {
+        <tr>
+            <th>@a</th>
+            <td>@i.GuideName</td>
+            <td>@i.GuideTitle</td>
+            <td>
+                <a href="/AdminGuide/DeleteGuide/@i.GuideId" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/AdminGuide/EditGuide/@i.GuideId" class="btn btn-warning">Güncelle</a>
+            </td>
+        </tr>
+
+        a++;
+
+    }
+</table>
+

@@ -14,5 +14,6 @@ namespace Casgem_CodeFirstProject.Dal.Context
         public DbSet<Destination> Destinations  { get; set; }
         public DbSet<Guide> Guides { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<Admin> Admins { get; set; }
     }
 }
