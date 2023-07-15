@@ -62,7 +62,8 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public ActionResult About()
         {
-            return View();
+            var value = c.Abouts.Find(1);
+            return View(value);
         }
 
         [HttpGet]

@@ -79,7 +79,6 @@ namespace Casgem_CodeFirstProject.Controllers
             foundId.AboutTitle1 = p.AboutTitle1;
             foundId.AboutDes1 = p.AboutDes1;
 
-           
             foundId.AboutTitle2 = p.AboutTitle2;
             foundId.AboutDes2 = p.AboutDes2;
 
@@ -87,7 +86,7 @@ namespace Casgem_CodeFirstProject.Controllers
             foundId.AboutTitle3 = p.AboutTitle3;
             foundId.AboutDes3 = p.AboutDes3;
             c.SaveChanges();
-            return RedirectToRoute("ListAbout");
+            return RedirectToAction("ListAbout");
         }
 
 

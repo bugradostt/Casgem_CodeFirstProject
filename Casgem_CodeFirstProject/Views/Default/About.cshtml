@@ -1,4 +1,5 @@
-﻿
+﻿@model Casgem_CodeFirstProject.Dal.Entities.About 
+
 @{
     Layout = null;
 }
@@ -37,10 +38,9 @@
             <div class="container">
 
                 <div class="my-bio">
-                    <img src="~/Temlates/Vitrin/assets/images/1.jpg" alt="product" class="img-responsive about-me">
-                    <h3 class="mt-lg-4 mt-3">A Gondola Ride is the One Venetian Tourist Trap Everyone Falls Into.</h3>
-                    <p class="para mb-3">Lorem ipsum dolor sit amet  deleniti dolore sequi labore similique vitae .inventore deleniti dolore sequi labore similique vitae quae est.Cum quo maiores asperiores sequi error alias molli aliquid pr Lorem ipsum dolor sit amet consectetur adipisicing elit.inventore deleniti dolore sequi labore similique vitae.</p>
-                    <p class="para mb-lg-3">Cum quo maiores asperiores sequi error alias molli aliquid pr Lorem ipsum dolor sit amet consectetur adipisicing elit.inventore deleniti dolore sequi labore similique vitae.</p>
+                    <img src="@Html.ValueFor(x=>x.AboutImgUrl1)" alt="product" class="img-responsive about-me">
+                    <h3 class="mt-lg-4 mt-3">@Html.ValueFor(x => x.AboutTitle1)</h3>
+                    <p class="para mb-3">@Html.ValueFor(x => x.AboutDes1)</p>
                 </div>
 
             </div>
@@ -51,14 +51,9 @@
         <div class="main-w3 ">
             <div class="container">
                 <div class="right-side">
-                    <h3 class="title-big">consectetur adipisicing elit. Odio molestiae explicabo nostrum recus andae.</h3>
+                    <h3 class="title-big">@Html.ValueFor(x => x.AboutTitle2)</h3>
                     <p class="mt-4 para">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, soluta impedit.
-                        Consequatur,
-                        quasi mollitia? Adipisci exercitationem amet dolore expedita repudiandae voluptatem impedit ipsa
-                        vero
-                        repellendus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio molestiae ex aut
-                        possimus atque explicabo nostrum recusandae ab quisquam at!
+                        @Html.ValueFor(x => x.AboutDes2)
                     </p>
                 </div>
             </div>
@@ -69,12 +64,11 @@
             <div class="container">
                 <div class="row">
                     <div class="my-bio cwp4-text col-lg-6">
-                        <h3>Modern and Luxury Architecture and Interior Designers for you</h3>
-                        <p class="para mt-3 mb-lg-4 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, soluta impedit. Consequatur, quasi mollitia? Adipisci exercitationem amet dolore expedita repudiandae voluptatem impedit ipsa vero repellendus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio molestiae ex aut possimus atque explicabo nostrum recusandae ab quisquam.</p>
-                        <a href="about.html" class="action-button btn mt-4">Read more <span class="fa fa-angle-double-right"></span></a>
+                        <h3>@Html.ValueFor(x => x.AboutTitle3)</h3>
+                        <p class="para mt-3 mb-lg-4 ">@Html.ValueFor(x => x.AboutDes3) </p>
                     </div>
                     <div class="col-lg-6 ">
-                        <img src="~/Temlates/Vitrin/assets/images/b4.jpg" alt="product" class="img-responsive about-me">
+                        <img src="@Html.ValueFor(x=>x.AboutImgUrl2)" alt="product" class="img-responsive about-me">
                     </div>
                 </div>
             </div>
