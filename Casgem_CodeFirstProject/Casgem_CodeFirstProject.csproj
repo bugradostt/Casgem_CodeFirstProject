@@ -134,6 +134,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Dal\Context\TravelContext.cs" />
+    <Compile Include="Dal\Entities\About.cs" />
     <Compile Include="Dal\Entities\Admin.cs" />
     <Compile Include="Dal\Entities\Booking.cs" />
     <Compile Include="Dal\Entities\Contact.cs" />
@@ -159,6 +160,10 @@
     <Compile Include="Migrations\202307151511285_add_mig_contactinfo.cs" />
     <Compile Include="Migrations\202307151511285_add_mig_contactinfo.designer.cs">
       <DependentUpon>202307151511285_add_mig_contactinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307151744374_add_mig_about.cs" />
+    <Compile Include="Migrations\202307151744374_add_mig_about.designer.cs">
+      <DependentUpon>202307151744374_add_mig_about.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -384,6 +389,8 @@
     <Content Include="Views\Admin\Message.cshtml" />
     <Content Include="Views\Admin\ListContact.cshtml" />
     <Content Include="Views\Admin\EditContact.cshtml" />
+    <Content Include="Views\Admin\ListAbout.cshtml" />
+    <Content Include="Views\Admin\EditAbout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -414,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307151511285_add_mig_contactinfo.resx">
       <DependentUpon>202307151511285_add_mig_contactinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307151744374_add_mig_about.resx">
+      <DependentUpon>202307151744374_add_mig_about.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

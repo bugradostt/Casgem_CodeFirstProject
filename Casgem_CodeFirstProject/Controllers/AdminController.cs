@@ -57,6 +57,40 @@ namespace Casgem_CodeFirstProject.Controllers
             return RedirectToAction("ListContact");
         }
 
+        public ActionResult ListAbout()
+        {
+            var value = c.Abouts.Find(1);
+            return View(value);
+        }
+
+
+        [HttpGet]
+        public ActionResult EditAbout()
+        {
+            var foundId = c.Abouts.Find(1);
+            return View(foundId);
+        }
+
+        [HttpPost]
+        public ActionResult EditAbout(About p)
+        {
+            var foundId = c.Abouts.Find(1);
+            foundId.AboutImgUrl1 = p.AboutImgUrl1;
+            foundId.AboutTitle1 = p.AboutTitle1;
+            foundId.AboutDes1 = p.AboutDes1;
+
+           
+            foundId.AboutTitle2 = p.AboutTitle2;
+            foundId.AboutDes2 = p.AboutDes2;
+
+            foundId.AboutImgUrl2 = p.AboutImgUrl2;
+            foundId.AboutTitle3 = p.AboutTitle3;
+            foundId.AboutDes3 = p.AboutDes3;
+            c.SaveChanges();
+            return RedirectToRoute("ListAbout");
+        }
+
+
 
 
 

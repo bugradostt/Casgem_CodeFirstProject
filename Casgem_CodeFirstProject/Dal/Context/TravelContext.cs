@@ -16,5 +16,6 @@ namespace Casgem_CodeFirstProject.Dal.Context
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<ContactInfo> ContactInfos { get; set; }
+        public DbSet<About> Abouts { get; set; }
     }
 }

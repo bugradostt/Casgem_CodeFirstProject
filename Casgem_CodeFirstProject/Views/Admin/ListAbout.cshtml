@@ -1,0 +1,72 @@
+﻿@model Casgem_CodeFirstProject.Dal.Entities.About
+
+@{
+    ViewBag.Title = "ListAbout";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+<h3>Hakkımızda</h3>
+<hr />
+
+<div>
+
+  
+        <div class="mt-3">
+            <label>Fotoğraf</label>
+            <img src="@Html.ValueFor(x=>x.AboutImgUrl1)" width="200" />
+        </div>
+
+        <div class="mt-3">
+            <label>Başlık</label>
+            <input type="text" class="form-control" value="@Html.ValueFor(x=>x.AboutTitle1)" disabled />
+        </div>
+
+        <div class="mt-3">
+            <label>Açıklama</label>
+            <textarea class="form-control" disabled>@Html.ValueFor(x=>x.AboutDes1)</textarea>
+        </div>
+
+        <hr />
+
+
+        <div class="mt-3">
+            <label>Başlık 2</label>
+            <input type="text" class="form-control" value="@Html.ValueFor(x=>x.AboutTitle2)" disabled />
+        </div>
+
+        <div class="mt-3">
+            <label>Açıklama 2</label>
+            <textarea class="form-control" disabled>@Html.ValueFor(x=>x.AboutDes2)</textarea>
+        </div>
+
+        <hr />
+
+        <div class="mt-3">
+            <label>Fotoğraf 2</label>
+            <img src="@Html.ValueFor(x=>x.AboutImgUrl2)" width="200" />
+        </div>
+
+        <div class="mt-3">
+            <label>Başlık 3</label>
+            <input type="text" class="form-control" value="@Html.ValueFor(x=>x.AboutTitle3)" disabled />
+        </div>
+
+        <div class="mt-3">
+            <label>Açıklama 3</label>
+            <textarea class="form-control" disabled>@Html.ValueFor(x=>x.AboutDes3)</textarea>
+        </div>
+
+
+
+
+        <div class="mt-3">
+            <a href="/Admin/EditAbout/" class="btn btn-warning">Güncelle</a>
+        </div>
+
+
+</div>
+
+
+
