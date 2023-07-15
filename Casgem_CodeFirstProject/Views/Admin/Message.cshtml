@@ -1,0 +1,50 @@
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.Contact>
+
+@{
+    ViewBag.Title = "Message";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+
+<h3>Mesaj Listesi</h3>
+<hr />
+
+
+<table class="table table-striped">
+
+    <tr>
+        <th>#</th>
+        <th>Adı Soyadı</th>
+        <th>Mail</th>
+        <th>Gonderim Tarihi</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th></th>
+
+    </tr>
+
+    @{ int a = 1;}
+    @foreach (var i in Model)
+    {
+        <tr>
+            <th>@a</th>
+            <td>@i.NameSurname</td>
+            <td>@i.Mail</td>
+            <td>@i.MessageDate.ToShortDateString()</td>
+            <td>@i.Subject</td>
+            <td>@i.Message</td>
+            <td>
+                <a href="/Admin/DeleteMessage/@i.ContactId" class="btn btn-danger">Sil</a>
+            </td>
+            
+        </tr>
+
+        a++;
+
+    }
+</table>
+
+
+

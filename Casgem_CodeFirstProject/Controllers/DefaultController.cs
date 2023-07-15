@@ -74,6 +74,7 @@ namespace Casgem_CodeFirstProject.Controllers
         [HttpPost]
         public ActionResult Contact(Contact p)
         {
+            p.MessageDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             c.Contacts.Add(p);
             c.SaveChanges();
             return RedirectToAction("Contact");

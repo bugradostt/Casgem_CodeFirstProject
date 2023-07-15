@@ -8,10 +8,18 @@ namespace Casgem_CodeFirstProject.Controllers
 {
     public class AdminController : Controller
     {
+        Context c new 
         // GET: Admin
         public ActionResult Index()
         {
             return View();
         }
+
+        public ActionResult Message()
+        {
+            return View();
+        }
+
+
     }
 }
