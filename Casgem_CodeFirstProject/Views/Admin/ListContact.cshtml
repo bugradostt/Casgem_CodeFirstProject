@@ -1,0 +1,53 @@
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.ContactInfo>
+
+@{
+    ViewBag.Title = "Message";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h3>İletişim</h3>
+<hr />
+
+<div>
+
+    @foreach (var i in Model)
+    {
+        <div class="mt-3">
+            <label>Açıklama</label>
+            <textarea class="form-control" disabled>@i.ContactInfoDes</textarea>
+        </div>
+
+
+        <div class="mt-3">
+            <label>Telefon</label>
+            <input type="text" class="form-control" value="@i.ContactInfoPhone" disabled />
+        </div>
+
+        <div class="mt-3">
+            <label>Mail</label>
+            <input type="text" class="form-control" value="@i.ContactInfoMail" disabled />
+        </div>
+
+        <div class="mt-3">
+            <label>Adress</label>
+            <textarea class="form-control" disabled>@i.ContactInfoAdress</textarea>
+        </div>
+
+        <div class="mt-3">
+            <label>Harita</label>
+            <iframe src="@i.ContactInfoMaps"
+                    style="border:0; width:100%; height:400px" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="mt-3">
+           <a href="#" class="btn btn-warning">Güncelle</a>
+        </div>
+
+    }
+
+
+</div>
+
+

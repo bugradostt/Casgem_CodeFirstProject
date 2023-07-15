@@ -137,6 +137,7 @@
     <Compile Include="Dal\Entities\Admin.cs" />
     <Compile Include="Dal\Entities\Booking.cs" />
     <Compile Include="Dal\Entities\Contact.cs" />
+    <Compile Include="Dal\Entities\ContactInfo.cs" />
     <Compile Include="Dal\Entities\Destination.cs" />
     <Compile Include="Dal\Entities\Guide.cs" />
     <Compile Include="Dal\Entities\SocialMedia.cs" />
@@ -154,6 +155,10 @@
     <Compile Include="Migrations\202307121158210_mig_admin.cs" />
     <Compile Include="Migrations\202307121158210_mig_admin.designer.cs">
       <DependentUpon>202307121158210_mig_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307151511285_add_mig_contactinfo.cs" />
+    <Compile Include="Migrations\202307151511285_add_mig_contactinfo.designer.cs">
+      <DependentUpon>202307151511285_add_mig_contactinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -377,6 +382,7 @@
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\Contact.cshtml" />
     <Content Include="Views\Admin\Message.cshtml" />
+    <Content Include="Views\Admin\ListContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307121158210_mig_admin.resx">
       <DependentUpon>202307121158210_mig_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307151511285_add_mig_contactinfo.resx">
+      <DependentUpon>202307151511285_add_mig_contactinfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

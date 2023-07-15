@@ -30,6 +30,14 @@ namespace Casgem_CodeFirstProject.Controllers
             return RedirectToAction("Message");
         }
 
+        public ActionResult ListContact()
+        {
+            var values = c.ContactInfos.ToList();
+            return View(values);
+        }
+
+
+
 
     }
 }

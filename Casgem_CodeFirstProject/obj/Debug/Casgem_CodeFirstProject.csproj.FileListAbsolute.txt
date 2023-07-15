@@ -85,3 +85,4 @@ C:\Users\bugra\Desktop\1- Dosya\1-Projeler\casgem\Casgem_CodeFirstProject\Casgem
 C:\Users\bugra\Desktop\1- Dosya\1-Projeler\casgem\Casgem_CodeFirstProject\Casgem_CodeFirstProject\obj\Debug\Casgem_CodeFirstProject.csproj.GenerateResource.cache
 C:\Users\bugra\Desktop\1- Dosya\1-Projeler\casgem\Casgem_CodeFirstProject\Casgem_CodeFirstProject\obj\Debug\Casgem_CodeFirstProject.Migrations.mig_update.resources
 C:\Users\bugra\Desktop\1- Dosya\1-Projeler\casgem\Casgem_CodeFirstProject\Casgem_CodeFirstProject\obj\Debug\Casgem_CodeFirstProject.Migrations.mig_admin.resources
+C:\Users\bugra\Desktop\1- Dosya\1-Projeler\casgem\Casgem_CodeFirstProject\Casgem_CodeFirstProject\obj\Debug\Casgem_CodeFirstProject.Migrations.add_mig_contactinfo.resources
