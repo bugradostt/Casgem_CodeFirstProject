@@ -1,0 +1,53 @@
+﻿@model Casgem_CodeFirstProject.Dal.Entities.ContactInfo
+
+@{
+    ViewBag.Title = "EditContact";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h3>İletişim Güncelle</h3>
+<hr />
+
+<form method="post">
+
+
+    <input type="hidden" class="form-control" name="ContactInfoId" value="@Html.ValueFor(x=>x.ContactInfoId)"  />
+
+    <div class="mt-3">
+        <label>Açıklama</label>
+        <textarea class="form-control" name="ContactInfoDes">@Html.ValueFor(x=>x.ContactInfoDes)</textarea>
+    </div>
+
+
+    <div class="mt-3">
+        <label>Telefon</label>
+        <input type="text" class="form-control" name="ContactInfoPhone" value="@Html.ValueFor(x=>x.ContactInfoPhone)" />
+    </div>
+
+    <div class="mt-3">
+        <label>Mail</label>
+        <input type="text" class="form-control" name="ContactInfoMail" value="@Html.ValueFor(x=>x.ContactInfoMail)"  />
+    </div>
+
+    <div class="mt-3">
+        <label>Adress</label>
+        <textarea class="form-control" name="ContactInfoAdress" >@Html.ValueFor(x=>x.ContactInfoAdress)</textarea>
+    </div>
+
+    <div class="mt-3">
+        <label>Harita</label>
+        <textarea class="form-control" name="ContactInfoMaps" >@Html.ValueFor(x=>x.ContactInfoMaps)</textarea>
+
+    </div>
+
+    <div class="mt-3">
+        <a href="/Admin/ListContact/" class="btn btn-danger">İptal</a>
+        <input type="submit" class="btn btn-warning" value="Güncelle" />
+    </div>
+
+
+
+</form>
+
+

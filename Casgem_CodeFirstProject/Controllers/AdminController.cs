@@ -1,4 +1,5 @@
 ﻿using Casgem_CodeFirstProject.Dal.Context;
+using Casgem_CodeFirstProject.Dal.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,26 @@ namespace Casgem_CodeFirstProject.Controllers
         {
             var values = c.ContactInfos.ToList();
             return View(values);
+        }
+
+        [HttpGet]
+        public ActionResult EditContact()
+        {
+            var foundId = c.ContactInfos.Find(1);
+            return View(foundId);
+        }
+
+        [HttpPost]
+        public ActionResult EditContact(ContactInfo p)
+        {
+            var foundId = c.ContactInfos.Find(p.ContactInfoId);
+            foundId.ContactInfoAdress = p.ContactInfoAdress;
+            foundId.ContactInfoDes = p.ContactInfoDes;
+            foundId.ContactInfoMail = p.ContactInfoMail;
+            foundId.ContactInfoMaps = p.ContactInfoMaps;
+            foundId.ContactInfoPhone = p.ContactInfoPhone;
+            c.SaveChanges();
+            return RedirectToAction("ListContact");
         }
 
 
