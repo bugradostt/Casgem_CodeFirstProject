@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Casgem_CodeFirstProject.Dal.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace Casgem_CodeFirstProject.Controllers
 {
     public class AdminController : Controller
     {
-        Context c new 
+        TravelContext c = new TravelContext();
         // GET: Admin
         public ActionResult Index()
         {
@@ -17,7 +18,16 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public ActionResult Message()
         {
-            return View();
+            var values = c.Contacts.OrderByDescending(x => x.ContactId).ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteMessage(int id)
+        {
+            var foundId = c.Contacts.Find(id);
+            c.Contacts.Remove(foundId);
+            c.SaveChanges();
+            return RedirectToAction("Message");
         }
 
 
