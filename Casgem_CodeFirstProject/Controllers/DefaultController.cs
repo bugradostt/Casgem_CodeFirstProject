@@ -68,7 +68,8 @@ namespace Casgem_CodeFirstProject.Controllers
         [HttpGet]
         public ActionResult Contact()
         {
-            return View();
+            var value = c.ContactInfos.Find(1);
+            return View(value);
         }
 
         [HttpPost]
