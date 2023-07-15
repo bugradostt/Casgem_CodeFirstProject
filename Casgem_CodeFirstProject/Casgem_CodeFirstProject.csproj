@@ -373,6 +373,9 @@
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\SocialMedia\Index.cshtml" />
     <Content Include="Views\SocialMedia\AddSocialMedia.cshtml" />
+    <Content Include="Views\Default\_PartialJavascript.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Default\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

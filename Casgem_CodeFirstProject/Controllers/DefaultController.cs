@@ -1,4 +1,5 @@
 ﻿using Casgem_CodeFirstProject.Dal.Context;
+using Casgem_CodeFirstProject.Dal.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace Casgem_CodeFirstProject.Controllers
         }
 
         public PartialViewResult _PartialHead()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult _PartialJavascript()
         {
             return PartialView();
         }
@@ -52,6 +58,25 @@ namespace Casgem_CodeFirstProject.Controllers
         {
             var values = c.Destinations.ToList();
             return PartialView(values);
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(Contact p)
+        {
+            c.Contacts.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Contact");
         }
     }
 }
