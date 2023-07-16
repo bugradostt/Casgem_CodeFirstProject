@@ -98,8 +98,9 @@ namespace Casgem_CodeFirstProject.Controllers
         public ActionResult DeleteSlider(int id)
         {
             var foundId = c.Sliders.Find(id);
+            c.Sliders.Remove(foundId);
             c.SaveChanges();
-            return RedirectToAction("Slider");
+            return RedirectToAction("ListSlider");
         }
 
         [HttpGet]
@@ -113,7 +114,7 @@ namespace Casgem_CodeFirstProject.Controllers
         {
             c.Sliders.Add(p);
             c.SaveChanges();
-            return RedirectToAction("Slider");
+            return RedirectToAction("ListSlider");
         }
 
         [HttpGet]
@@ -132,7 +133,7 @@ namespace Casgem_CodeFirstProject.Controllers
             foundId.SliderImgUrl = p.SliderImgUrl;
             foundId.SliderTitle = p.SliderTitle;
             c.SaveChanges();
-            return RedirectToAction("Slider");
+            return RedirectToAction("ListSlider");
         }
 
 
