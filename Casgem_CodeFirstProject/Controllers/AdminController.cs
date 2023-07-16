@@ -136,6 +136,12 @@ namespace Casgem_CodeFirstProject.Controllers
             return RedirectToAction("ListSlider");
         }
 
+        public ActionResult ListDestination()
+        {
+            var values = c.Destinations.OrderByDescending(x => x.DestinationId).ToList();
+            return View(values);
+        }
+
 
 
 
