@@ -89,6 +89,52 @@ namespace Casgem_CodeFirstProject.Controllers
             return RedirectToAction("ListAbout");
         }
 
+        public ActionResult ListSlider()
+        {
+            var values = c.Sliders.OrderByDescending(x=>x.SliderId).ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteSlider(int id)
+        {
+            var foundId = c.Sliders.Find(id);
+            c.SaveChanges();
+            return RedirectToAction("Slider");
+        }
+
+        [HttpGet]
+        public ActionResult AddSlider()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSlider(Slider p)
+        {
+            c.Sliders.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Slider");
+        }
+
+        [HttpGet]
+        public ActionResult EditSlider(int id)
+        {
+            var foundId = c.Sliders.Find(id);
+            return View(foundId);
+        }
+
+        [HttpPost]
+        public ActionResult EditSlider(Slider p)
+        {
+
+            var foundId = c.Sliders.Find(p.SliderId);
+            foundId.SliderDes = p.SliderDes;
+            foundId.SliderImgUrl = p.SliderImgUrl;
+            foundId.SliderTitle = p.SliderTitle;
+            c.SaveChanges();
+            return RedirectToAction("Slider");
+        }
+
 
 
 
