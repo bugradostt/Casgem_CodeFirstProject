@@ -80,6 +80,12 @@ namespace Casgem_CodeFirstProject.Controllers
             return View(value);
         }
 
+        public PartialViewResult _PartialAboutUser()
+        {
+            var values = c.Guides.OrderByDescending(x=>x.GuideId).ToList();
+            return PartialView(values);
+        }
+
         [HttpGet]
         public ActionResult Contact()
         {

@@ -48,6 +48,16 @@ namespace Casgem_CodeFirstProject.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        public ActionResult Uye(Admin p)
+        {
+            p.AdminStatus = false;
+            c.Admins.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Uye");
+        }
+
         public ActionResult LogOut()
         {
 

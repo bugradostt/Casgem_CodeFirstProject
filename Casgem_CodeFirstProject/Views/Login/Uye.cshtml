@@ -36,14 +36,13 @@
                 <div class="main-hotair">
                     <div class="content-wthree">
                         <h2>Üye Ol</h2>
-                        <form action="/Admin/AddUser/" method="post">
-                            <input type="hidden" class="text" name="AdminStatus" value="false">
+                        <form method="post">
                             <input type="text" class="text" name="AdminUserName" placeholder="Kullanıcı Adı" required="" autofocus>
                             <input type="password" class="password" name="AdminPassword" placeholder="Şifre" required="" autofocus>
                             <button class="btn btnUye" style="background-color: #fdc500" type="submit">Üye Ol</button>
                         </form>
 
-                        <p class="account">Hesabınız var mı? <a onclick="() => { alert('Yöneticinin onayını bekleyiniz') }" href="/Login/Index">Giriş yap</a></p>
+                        <p class="account">Hesabınız var mı? <a href="/Login/Index">Giriş yap</a></p>
                     </div>
                     <div class="w3l_form align-self">
                         <div class="left_grid_info">

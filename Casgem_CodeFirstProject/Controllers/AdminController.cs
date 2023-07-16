@@ -8,6 +8,8 @@ using System.Web.Mvc;
 
 namespace Casgem_CodeFirstProject.Controllers
 {
+
+    [Authorize]
     public class AdminController : Controller
     {
         TravelContext c = new TravelContext();

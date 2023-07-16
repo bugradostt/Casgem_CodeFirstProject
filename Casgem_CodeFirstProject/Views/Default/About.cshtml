@@ -40,7 +40,7 @@
                 <div class="my-bio">
                     <img src="@Html.ValueFor(x=>x.AboutImgUrl1)" alt="product" class="img-responsive about-me">
                     <h3 class="mt-lg-4 mt-3">@Html.ValueFor(x => x.AboutTitle1)</h3>
-                    <p class="para mb-3">@Html.ValueFor(x => x.AboutDes1)</p>
+                    <p class="para mb-3" style="text-align:justify">@Html.ValueFor(x => x.AboutDes1)</p>
                 </div>
 
             </div>
@@ -52,7 +52,7 @@
             <div class="container">
                 <div class="right-side">
                     <h3 class="title-big">@Html.ValueFor(x => x.AboutTitle2)</h3>
-                    <p class="mt-4 para">
+                    <p class="mt-4 para"  style="text-align:justify">
                         @Html.ValueFor(x => x.AboutDes2)
                     </p>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="my-bio cwp4-text col-lg-6">
                         <h3>@Html.ValueFor(x => x.AboutTitle3)</h3>
-                        <p class="para mt-3 mb-lg-4 ">@Html.ValueFor(x => x.AboutDes3) </p>
+                        <p class="para mt-3 mb-lg-4 "  style="text-align:justify">@Html.ValueFor(x => x.AboutDes3) </p>
                     </div>
                     <div class="col-lg-6 ">
                         <img src="@Html.ValueFor(x=>x.AboutImgUrl2)" alt="product" class="img-responsive about-me">
@@ -78,70 +78,9 @@
         <!-- /team-grids -->
         <div class="team-content-page editContent ">
 
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-3 col-md-6 col-sm-6 column">
-                        <a href="#url"><img class="img img-responsive" src="~/Temlates/Vitrin/assets/images/t1.jpg" alt=""></a>
-                        <h4><a href="#url">John watson</a></h4>
-                        <div class="w3l-team-7_bottom">
-                            <div class="w3l-team-7_bottom-left">
-                                <h6>Founder of company</h6>
-                            </div>
-                            <ul class="social_7 mt-3">
-                                <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 column">
-                        <a href="#url"><img class="img img-responsive" src="~/Temlates/Vitrin/assets/images/t2.jpg" alt=""></a>
-                        <h4><a href="#url">Alexander</a></h4>
-                        <div class="w3l-team-7_bottom">
-                            <div class="w3l-team-7_bottom-left">
-                                <h6>Co-Founder of company</h6>
-                            </div>
-                            <ul class="social_7 mt-3">
-                                <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 column">
-                        <a href="#url"><img class="img img-responsive" src="~/Temlates/Vitrin/assets/images/t3.jpg" alt=""></a>
-                        <h4><a href="#url">Steve smith</a></h4>
-                        <div class="w3l-team-7_bottom">
-                            <div class="w3l-team-7_bottom-left">
-                                <h6>Manager of company</h6>
-                            </div>
-                            <ul class="social_7 mt-3">
-                                <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 column">
-                        <a href="#url"><img class="img img-responsive" src="~/Temlates/Vitrin/assets/images/t4.jpg" alt=""></a>
-                        <h4><a href="#url">Steve smith</a></h4>
-                        <div class="w3l-team-7_bottom">
-                            <div class="w3l-team-7_bottom-left">
-                                <h6>Manager of company</h6>
-                            </div>
-                            <ul class="social_7 mt-3">
-                                <li><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-                                <li><a href="#twitter"><span class="fa fa-instagram"></span></a></li>
-                            </ul>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @Html.Action("_PartialAboutUser")
+
+        
         </div>
         <!-- /team-grids -->
     </section>
