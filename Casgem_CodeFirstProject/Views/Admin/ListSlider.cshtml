@@ -1,0 +1,52 @@
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.Slider>
+
+@{
+    ViewBag.Title = "ListSlider";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+
+
+<h3>Slider Listesi</h3>
+<hr />
+
+<a href="/Admin/AddSlider/" class="btn btn-success">Ekle</a>
+<br />
+<br />
+
+<table class="table table-striped">
+
+    <tr>
+        <th>#</th>
+        <th>Fotoğraf</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @{ int a = 1;}
+    @foreach (var i in Model)
+    {
+        <tr>
+            <th>@a</th>
+            <td>
+                <img src="@i.SliderImgUrl" width="100" />
+            </td>
+            <td>@i.SliderTitle</td>
+            <td>@i.SliderDes</td>
+            <td>
+                <a href="/Admin/DeleteSlider/@i.SliderId" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/EditSlider/@i.SliderId" class="btn btn-warning">Güncelle</a>
+            </td>
+        </tr>
+
+        a++;
+
+    }
+</table>
+
