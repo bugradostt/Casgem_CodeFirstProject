@@ -36,7 +36,8 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult _PartialSlider()
         {
-            return PartialView();
+            var values = c.Sliders.OrderByDescending(x => x.SliderId).ToList();
+           return PartialView(values);
         }
 
         public PartialViewResult _PartialBooking()

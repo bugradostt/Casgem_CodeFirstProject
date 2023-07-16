@@ -141,6 +141,7 @@
     <Compile Include="Dal\Entities\ContactInfo.cs" />
     <Compile Include="Dal\Entities\Destination.cs" />
     <Compile Include="Dal\Entities\Guide.cs" />
+    <Compile Include="Dal\Entities\Slider.cs" />
     <Compile Include="Dal\Entities\SocialMedia.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,6 +165,10 @@
     <Compile Include="Migrations\202307151744374_add_mig_about.cs" />
     <Compile Include="Migrations\202307151744374_add_mig_about.designer.cs">
       <DependentUpon>202307151744374_add_mig_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307160643443_mig_add_slider.cs" />
+    <Compile Include="Migrations\202307160643443_mig_add_slider.designer.cs">
+      <DependentUpon>202307160643443_mig_add_slider.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -424,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307151744374_add_mig_about.resx">
       <DependentUpon>202307151744374_add_mig_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307160643443_mig_add_slider.resx">
+      <DependentUpon>202307160643443_mig_add_slider.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
