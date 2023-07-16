@@ -1,0 +1,37 @@
+﻿@model Casgem_CodeFirstProject.Dal.Entities.Slider
+
+@{
+    ViewBag.Title = "EditSlider";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3> Slider Ekle</h3>
+<hr />
+
+<form method="post">
+
+    <input type="hidden" name="SliderId" value="@Html.ValueFor(x=>x.SliderId)" class="form-control" required />
+
+    <div class="mt-3">
+        <label>Başlık</label>
+        <input type="text" name="SliderTitle" value="@Html.ValueFor(x=>x.SliderTitle)" placeholder="Başlık yazınız" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Açıklama</label>
+        <textarea name="SliderDes" placeholder="Açıklama yazınız" rows="3" class="form-control" required>@Html.ValueFor(x=>x.SliderDes)</textarea>
+    </div>
+
+    <div class="mt-3">
+        <label>Fotoğraf Url</label>
+        <input type="text" name="SliderImgUrl" value="@Html.ValueFor(x=>x.SliderImgUrl)" placeholder="Fotoğraf url" class="form-control" required />
+    </div>
+
+    <br />
+    <a class="btn btn-danger" href="/Admin/ListSlider/">İptal</a>
+
+
+    <input type="submit" value="Güncelle" class="btn btn-warning" />
+</form>
+
+
