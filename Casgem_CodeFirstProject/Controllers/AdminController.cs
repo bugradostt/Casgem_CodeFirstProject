@@ -205,7 +205,7 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public ActionResult ListUser()
         {
-            var values = c.Admins.OrderByDescending(x => x.AdminId).ToList();
+            var values = c.Admins.OrderBy(x=>x.AdminStatus).ToList();
             return View(values);
         }
 

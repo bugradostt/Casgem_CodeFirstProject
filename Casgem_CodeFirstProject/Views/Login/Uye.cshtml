@@ -4,15 +4,12 @@
 }
 
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+
 <!DOCTYPE html>
 <html lang="tr">
 
 <head>
-    <title>Giriş Yap</title>
+    <title>Üye Ol</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
@@ -31,21 +28,22 @@ Author URL: http://w3layouts.com
 <body>
 
     <!-- form section start -->
-    <section class="w3l-hotair-form">
+    <section class="w3l-hotair-form" style="background-color: #fdc500">
         <h1>Budotekno</h1>
         <div class="container">
             <!-- /form -->
             <div class="workinghny-form-grid">
                 <div class="main-hotair">
                     <div class="content-wthree">
-                        <h2>Giriş Yap</h2>
-                        <form  method="post">
+                        <h2>Üye Ol</h2>
+                        <form action="/Admin/AddUser/" method="post">
+                            <input type="hidden" class="text" name="AdminStatus" value="false">
                             <input type="text" class="text" name="AdminUserName" placeholder="Kullanıcı Adı" required="" autofocus>
                             <input type="password" class="password" name="AdminPassword" placeholder="Şifre" required="" autofocus>
-                            <button class="btn" type="submit">Giriş Yap</button>
+                            <button class="btn btnUye" style="background-color: #fdc500" type="submit">Üye Ol</button>
                         </form>
 
-                        <p class="account">Hesabınız yok mu? <a href="/Login/Uye/">Üye Ol</a></p>
+                        <p class="account">Hesabınız var mı? <a onclick="() => { alert('Yöneticinin onayını bekleyiniz') }" href="/Login/Index">Giriş yap</a></p>
                     </div>
                     <div class="w3l_form align-self">
                         <div class="left_grid_info">
@@ -57,7 +55,6 @@ Author URL: http://w3layouts.com
             <!-- //form -->
         </div>
         <!-- copyright-->
-     
         <!-- //copyright-->
     </section>
     <!-- //form section start -->

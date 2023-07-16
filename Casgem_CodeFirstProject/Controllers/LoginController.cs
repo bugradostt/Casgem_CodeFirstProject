@@ -25,7 +25,7 @@ namespace Casgem_CodeFirstProject.Controllers
         [HttpPost]
         public ActionResult Index(Admin p)
         {
-            var values = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
+            var values = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword && x.AdminStatus==true);
 
             if(values != null)
             {
@@ -41,5 +41,21 @@ namespace Casgem_CodeFirstProject.Controllers
 
 
         }
+
+        [HttpGet]
+        public ActionResult Uye()
+        {
+            return View();
+        }
+
+        public ActionResult LogOut()
+        {
+
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
