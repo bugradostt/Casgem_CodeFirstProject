@@ -1,0 +1,51 @@
+﻿@model  Casgem_CodeFirstProject.Dal.Entities.Destination
+
+@{
+    ViewBag.Title = "EditDestination";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h3> Tur Güncelle</h3>
+<hr />
+
+<form method="post">
+        <input type="hidden" name="DestinationId" value="@Html.ValueFor(x=>x.DestinationId)" class="form-control" required />
+
+    <div class="mt-3">
+        <label>Tur Adı</label>
+        <input type="text" name="DestinationName" value="@Html.ValueFor(x=>x.DestinationName)" placeholder="Tur adını yazınız" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Fotoğraf Url</label>
+        <input type="text" name="ImageUrl" value="@Html.ValueFor(x=>x.ImageUrl)" placeholder="Fotoğraf url" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Tur Süresi</label>
+        <input type="number" name="DayNight" value="@Html.ValueFor(x=>x.DayNight)" placeholder="Tur süresi" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Kişi Sayısı</label>
+        <input type="number" name="Capacity" value="@Html.ValueFor(x=>x.Capacity)" placeholder="Kişi sayısı" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Fiyat</label>
+        <input type="text" name="Price" value="@Html.ValueFor(x=>x.Price)" placeholder="Fiyat" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Açıklama</label>
+        <textarea name="Desription" placeholder="Açıklama" class="form-control" required>@Html.ValueFor(x=>x.Desription)</textarea>
+
+    </div>
+
+
+    <br />
+    <a class="btn btn-danger" href="/Admin/ListDestination/">İptal</a>
+    <input type="submit" value="Güncelle" class="btn btn-warning" />
+</form>
+

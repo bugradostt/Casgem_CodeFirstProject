@@ -400,6 +400,8 @@
     <Content Include="Views\Admin\AddSlider.cshtml" />
     <Content Include="Views\Admin\EditSlider.cshtml" />
     <Content Include="Views\Admin\ListDestination.cshtml" />
+    <Content Include="Views\Admin\AddDestination.cshtml" />
+    <Content Include="Views\Admin\EditDestination.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

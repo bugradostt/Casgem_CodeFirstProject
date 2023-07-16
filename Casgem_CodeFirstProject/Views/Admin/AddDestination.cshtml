@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "AddDestination";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+
+<h3> Tur Ekle</h3>
+<hr />
+
+<form method="post">
+
+    <div class="mt-3">
+        <label>Tur Adı</label>
+        <input type="text" name="DestinationName" placeholder="Tur adını yazınız" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Fotoğraf Url</label>
+        <input type="text" name="ImageUrl" placeholder="Fotoğraf url" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Tur Süresi</label>
+        <input type="number" name="DayNight" placeholder="Tur süresi" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Kişi Sayısı</label>
+        <input type="number" name="Capacity" placeholder="Kişi sayısı" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Fiyat</label>
+        <input type="number" name="Price" placeholder="Fiyat" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Açıklama</label>
+        <textarea name="Desription" placeholder="Açıklama" class="form-control" required ></textarea>
+        
+    </div>
+
+
+    <br />
+    <a class="btn btn-danger" href="/Admin/ListDestination/">İptal</a>
+    <input type="submit" value="Kaydet" class="btn btn-success" />
+</form>
+

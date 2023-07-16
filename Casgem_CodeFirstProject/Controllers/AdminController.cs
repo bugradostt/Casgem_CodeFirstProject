@@ -142,6 +142,51 @@ namespace Casgem_CodeFirstProject.Controllers
             return View(values);
         }
 
+        public ActionResult DeleteDestination(int id)
+        {
+            var foundId = c.Destinations.Find(id);
+            c.Destinations.Remove(foundId);
+            c.SaveChanges();
+            return RedirectToAction("ListDestination");
+        }
+
+        [HttpGet]
+        public ActionResult AddDestination()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult AddDestination(Destination p)
+        {
+            c.Destinations.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("ListDestination");
+        }
+
+        [HttpGet]
+        public ActionResult EditDestination(int id)
+        {
+            var foundId = c.Destinations.Find(id);
+            return View(foundId);
+        }
+
+
+        [HttpPost]
+        public ActionResult EditDestination(Destination p)
+        {
+            var foundId = c.Destinations.Find(p.DestinationId);
+            foundId.Capacity = p.Capacity;
+            foundId.DayNight = p.DayNight;
+            foundId.Desription = p.Desription;
+            foundId.DestinationName = p.DestinationName;
+            foundId.ImageUrl = p.ImageUrl;
+            foundId.Price = p.Price;
+            c.SaveChanges();
+            return RedirectToAction("ListDestination");
+        }
+
 
 
 
