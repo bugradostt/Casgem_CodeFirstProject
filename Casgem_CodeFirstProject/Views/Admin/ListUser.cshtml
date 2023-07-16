@@ -1,0 +1,62 @@
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.Admin>
+@{
+    ViewBag.Title = "ListUser";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h3>Kullanıcı Listesi</h3>
+<hr />
+
+<a href="/Admin/AddUser/" class="btn btn-success">Ekle</a>
+<br />
+<br />
+
+<table class="table table-striped">
+
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Şifre</th>
+        <th>Durumu</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @{ int a = 1;}
+    @foreach (var i in Model)
+    {
+        <tr>
+            <th>@a</th>
+            <td>@i.AdminUserName</td>
+            <td>
+              @for (int j = 0; j < i.AdminPassword.Length; j++)
+              {
+                  <span>*</span>
+              }
+            </td>
+            <td>
+                @if (i.AdminStatus==true)
+                {
+                    <span class="text-success">Onaylı</span>
+                }
+                else
+                {
+                   <a href="/Admin/StatusUser/@i.AdminId" class="btn btn-info">Onayla</a>
+                }
+            </td>
+            <td>
+                <a href="/Admin/DeleteUser/@i.AdminId" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Admin/EditUser/@i.AdminId" class="btn btn-warning">Güncelle</a>
+            </td>
+        </tr>
+
+        a++;
+
+    }
+</table>
+
+
+

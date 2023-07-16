@@ -10,5 +10,6 @@ namespace Casgem_CodeFirstProject.Dal.Entities
         public int AdminId { get; set; }
         public string AdminUserName { get; set; }
         public string AdminPassword { get; set; }
+        public bool AdminStatus { get; set; }
     }
 }

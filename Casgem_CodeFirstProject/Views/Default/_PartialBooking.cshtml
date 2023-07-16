@@ -1,66 +1,65 @@
-﻿<section class="w3l-call-to-action_9">
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.Destination>
+
+
+
+<section class="w3l-call-to-action_9">
     <div class="call-w3">
         <div class="container">
             <div class="booking-form-content">
                 <div class="main-titles-head ">
                     <h3 class="header-name">
-                        Get the Best Holiday Planned by Experts!
+                        Uzmanlar Tarafından Planlanan En İyi Tatili Yaşayın!
                     </h3>
-                    <p class="tiltle-para editContent ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic fuga sit illo modi aut aspernatur tempore laboriosam saepe dolores eveniet.</p>
+                    <p class="tiltle-para editContent "></p>
                 </div>
-                <form action="search-results.html" method="post" class="booking-form">
+                <form action="/Default/AddBooking/"  method="post" class="booking-form">
                     <div class="row book-form">
                         <div class="form-input col-md-4">
-                            <label>Name</label>
-                            <input type="text" name="" placeholder="Name" required="">
+                            <label>Ad Soyad</label>
+                            <input type="text" name="CustomerName" placeholder="Ad soyad" required="">
+                        </div>
+                        
+                        <div class="form-input col-md-4">
+                            <label>Mail</label>
+                            <input type="email" name="Mail" placeholder="Mail" required="">
                         </div>
                         <div class="form-input col-md-4">
-                            <label>Destination</label>
-                            <select name="selectpicker" class="selectpicker">
-                                <option value="">Any</option>
-                                <option value="africa">Africa</option>
-                                <option value="america">America</option>
-                                <option value="asia">Asia</option>
-                                <option value="eastern-europe">Eastern Europe</option>
-                                <option value="europe">Europe</option>
-                                <option value="south-america">South America</option>
+                            <label>Tur Adı</label>
+                            <select name="Destination" class="selectpicker">
+                                @foreach (var i in Model)
+                                {
+                                    <option value="@i.DestinationName">@i.DestinationName</option>
+                                }
                             </select>
 
                         </div>
-                        <div class="form-input col-md-4">
-                            <label>Activity</label>
-                            <select name="activity" class="selectpicker">
-                                <option value="">Any</option>
-                                <option value="city-tours">City Tours</option>
-                                <option value="cultural-thematic-tours">Cultural &amp; Thematic Tours</option>
-                                <option value="family-friendly-tours">Family Friendly Tours</option>
-                                <option value="holiday-seasonal-tours">Holiday &amp; Seasonal Tours</option>
-                                <option value="indulgence-luxury-tours">Indulgence &amp; Luxury Tours</option>
-                                <option value="outdoor-activites">Outdoor Activites</option>
-                                <option value="relaxation-tours">Relaxation Tours</option>
-                                <option value="wild-adventure-tours">Wild &amp; Adventure Tours</option>
+                       
+                        <div class="form-input col-md-4 mt-3">
+
+                            <label>Süre</label>
+                            <select name="Duration" class="selectpicker">
+                                <option value="1">1 Gün</option>
+                                <option value="2">2 Gün</option>
+                                <option value="3">3 Gün</option>
+                                <option value="4">4 Gün</option>
+                                <option value="5">5 Gün</option>
+                                <option value="6">6 Gün</option>
+                                <option value="7">7 Gün</option>
+                                <option value="8">8 Gün</option>
+                                <option value="9">9 Gün</option>
+                                <option value="10">10 Gün</option>
+                                <option value="11">10+ Gün</option>
                             </select>
 
                         </div>
                         <div class="form-input col-md-4 mt-3">
-
-                            <label>Duration</label>
-                            <select name="duration" class="selectpicker">
-                                <option value="">Any</option>
-                                <option value="1">1 Day Tour</option>
-                                <option value="2">2-4 Days Tour</option>
-                                <option value="5">5-7 Days Tour</option>
-                                <option value="7">7+ Days Tour</option>
-                            </select>
-
-                        </div>
-                        <div class="form-input col-md-4 mt-3">
-                            <label>Date</label>
-                            <input type="date" name="" placeholder="Date" required="">
+                            <label>Tarih</label>
+                            <input type="date" name="BookingDate" placeholder="Date" required="">
                         </div>
                         <div class="bottom-btn col-md-4 mt-3">
                             <label>Submit</label>
-                            <button class="btn btn-style btn-primary w-100 btn-style">Submit</button>
+                            <button  type="submit" class="btn btn-style btn-primary w-100 btn-style" 
+                                    >Rezerve Et</button>
                         </div>
                     </div>
                 </form>
@@ -68,4 +67,5 @@
         </div>
     </div>
 </section>
+
 

@@ -170,6 +170,10 @@
     <Compile Include="Migrations\202307160643443_mig_add_slider.designer.cs">
       <DependentUpon>202307160643443_mig_add_slider.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307161506595_mig_update_admins.cs" />
+    <Compile Include="Migrations\202307161506595_mig_update_admins.designer.cs">
+      <DependentUpon>202307161506595_mig_update_admins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -214,6 +218,12 @@
     <Content Include="Temlates\Login\images\undraw_Work_time_re_hdyv.svg" />
     <Content Include="Temlates\Login\index.html" />
     <Content Include="Temlates\Login\starter-license-W3Layouts.txt" />
+    <Content Include="Temlates\Page404\css\font-awesome.min.css" />
+    <Content Include="Temlates\Page404\css\style.css" />
+    <Content Include="Temlates\Page404\fonts\fontawesome-webfont.svg" />
+    <Content Include="Temlates\Page404\img\bg.jpg" />
+    <Content Include="Temlates\Page404\index.html" />
+    <Content Include="Temlates\Page404\readme.txt" />
     <Content Include="Temlates\Vitrin\about.html" />
     <Content Include="Temlates\Vitrin\assets\css\style-starter.css" />
     <Content Include="Temlates\Vitrin\assets\fonts\fontawesome-webfont.svg" />
@@ -402,6 +412,15 @@
     <Content Include="Views\Admin\ListDestination.cshtml" />
     <Content Include="Views\Admin\AddDestination.cshtml" />
     <Content Include="Views\Admin\EditDestination.cshtml" />
+    <Content Include="Views\Admin\ListRezerve.cshtml" />
+    <Content Include="Temlates\Page404\fonts\fontawesome-webfont.eot" />
+    <Content Include="Temlates\Page404\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Temlates\Page404\fonts\fontawesome-webfont.woff" />
+    <Content Include="Temlates\Page404\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Temlates\Page404\fonts\FontAwesome.otf" />
+    <Content Include="Views\Admin\ListUser.cshtml" />
+    <Content Include="Views\Admin\AddUser.cshtml" />
+    <Content Include="Views\Admin\EditUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -438,6 +457,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307160643443_mig_add_slider.resx">
       <DependentUpon>202307160643443_mig_add_slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307161506595_mig_update_admins.resx">
+      <DependentUpon>202307161506595_mig_update_admins.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

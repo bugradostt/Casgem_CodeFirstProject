@@ -42,12 +42,25 @@ namespace Casgem_CodeFirstProject.Controllers
 
         public PartialViewResult _PartialBooking()
         {
-            return PartialView();
+            //var values = c.Destinations.Select(x => x.DestinationName).ToList();
+
+            var values = c.Destinations.OrderBy(x=>x.DestinationName).ToList();
+            return PartialView(values);
+        }
+
+        [HttpPost]
+        public ActionResult AddBooking(Booking p)
+        {
+            c.Bookings.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+
         }
 
         public PartialViewResult _PartialFooter()
         {
-            return PartialView();
+            var values = c.ContactInfos.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult _PartialMoveTop()

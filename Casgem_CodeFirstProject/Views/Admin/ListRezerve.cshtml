@@ -1,0 +1,48 @@
+﻿@model List<Casgem_CodeFirstProject.Dal.Entities.Booking>
+
+@{
+    ViewBag.Title = "ListRezerve";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h3>Rezerve Listesi</h3>
+<hr />
+
+
+<table class="table table-striped">
+
+    <tr>
+        <th>#</th>
+        <th>Adı Soyadı</th>
+        <th>Mail</th>
+        <th>Tur Adı</th>
+        <th>Süre</th>
+        <th>Tarih</th>
+        <th></th>
+
+    </tr>
+
+    @{ int a = 1;}
+    @foreach (var i in Model)
+    {
+        <tr>
+            <th>@a</th>
+            <td>@i.CustomerName</td>
+            <td>@i.Mail</td>
+            <td>@i.Destination</td>
+            <td>@i.Duration</td>
+            <td>@i.BookingDate.ToShortDateString()</td>
+            <td>
+                <a href="/Admin/DeleteRezerve/@i.BookingId" class="btn btn-danger">Sil</a>
+            </td>
+
+        </tr>
+
+        a++;
+
+    }
+</table>
+
+
+

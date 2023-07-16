@@ -188,6 +188,81 @@ namespace Casgem_CodeFirstProject.Controllers
         }
 
 
+        public ActionResult ListRezerve()
+        {
+            var values = c.Bookings.OrderByDescending(x => x.BookingId).ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteRezerve(int id)
+        {
+            var foundId = c.Bookings.Find(id);
+            c.Bookings.Remove(foundId);
+            c.SaveChanges();
+            return RedirectToAction("ListRezerve");
+        }
+
+
+        public ActionResult ListUser()
+        {
+            var values = c.Admins.OrderByDescending(x => x.AdminId).ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteUser(int id)
+        {
+            var foundId = c.Admins.Find(id);
+            c.Admins.Remove(foundId);
+            c.SaveChanges();
+            return RedirectToAction("ListUser");
+        }
+
+        [HttpGet]
+        public ActionResult AddUser()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult AddUser(Admin p)
+        {
+            c.Admins.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("ListUser");
+        }
+
+        [HttpGet]
+        public ActionResult EditUser(int id)
+        {
+            var foundId = c.Admins.Find(id);
+            return View(foundId);
+        }
+
+
+        [HttpPost]
+        public ActionResult EditUser(Admin p)
+        {
+            var foundId = c.Admins.Find(p.AdminId);
+            foundId.AdminUserName = p.AdminUserName;
+            foundId.AdminPassword = p.AdminPassword;
+            foundId.AdminStatus = p.AdminStatus;
+            c.SaveChanges();
+            return RedirectToAction("ListUser");
+        }
+
+        public ActionResult StatusUser(int id)
+        {
+            var foundId = c.Admins.Find(id);
+            foundId.AdminStatus = true;
+            c.SaveChanges();
+            return RedirectToAction("ListUser");
+        }
+
+
+
+
+
 
 
 

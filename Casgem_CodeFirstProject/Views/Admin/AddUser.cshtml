@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3> Kullanıcı Ekle</h3>
+<hr />
+
+<form method="post">
+
+    <input type="hidden" name="AdminStatus" value="1" class="form-control" required />
+
+
+    <div class="mt-3">
+        <label>Kullanıcı Adı</label>
+        <input type="text" name="AdminUserName" placeholder="Kullanıcı adı" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <label>Şifre</label>
+        <input type="password" name="AdminPassword" placeholder="Şifre" class="form-control" required />
+    </div>
+
+
+    <br />
+    <a class="btn btn-danger" href="/Admin/ListUser/">İptal</a>
+    <input type="submit" value="Kaydet" class="btn btn-success" />
+</form>
+
+
